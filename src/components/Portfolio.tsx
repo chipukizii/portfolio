@@ -10,13 +10,13 @@ export function Portfolio() {
     linkedIn: 'YOUR_LINKEDIN_LINK',
     github: 'https://github.com/chipukizii',
     websites: [{
-      name: 'YOUR_WEBSITE_1',
+      name: 'Ecommerce Store',
       url: 'https://rotichstore-2.onrender.com'
     }, {
-      name: 'YOUR_WEBSITE_2',
+      name: 'My High School Website',
       url: 'https://simoti-high.onrender.com'
     }, {
-      name: 'YOUR_WEBSITE_3',
+      name: 'Smart Pharmacy Stock Management System',
       url: 'https://smartpharmacy-management.vercel.app'
     }]
   };
