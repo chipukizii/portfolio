@@ -16,7 +16,7 @@ export function Portfolio() {
       name: 'My High School Website',
       url: 'https://simoti-high.onrender.com'
     }, {
-      name: 'Smart Pharmacy Stock Management System',
+      name: 'SmartPharmacy Stock Management System',
       url: 'https://smartpharmacy-management.vercel.app'
     }]
   };
