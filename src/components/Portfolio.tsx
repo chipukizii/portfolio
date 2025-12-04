@@ -7,7 +7,7 @@ export function Portfolio() {
     name: 'Gilton Koech',
     title: 'Software Engineer',
     cvLink: 'YOUR_CV_LINK',
-    linkedIn: 'YOUR_LINKEDIN_LINK',
+    linkedIn: 'https://www.linkedin.com/in/gilton-koech-8263b7365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     github: 'https://github.com/chipukizii',
     websites: [{
       name: 'Ecommerce Store',
