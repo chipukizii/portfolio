@@ -11,7 +11,7 @@ export function Portfolio() {
     image: 'https://res.cloudinary.com/dnhrk9ijv/image/upload/v1764869798/WhatsApp_Image_2025-12-04_at_20.36.00_huu3tk.jpg',
     name: 'Gilton Koech',
     title: 'Software Engineer',
-    cvLink: 'YOUR_CV_LINK',
+    cvLink: 'https://drive.google.com/file/d/1nY9IGSglbOlFF7kZIRJ4UaPMwMLVeC_D/view?usp=drivesdk',
     linkedIn: 'https://www.linkedin.com/in/gilton-koech-8263b7365',
     github: 'https://github.com/chipukizii',
     websites: [
