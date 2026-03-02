@@ -31,7 +31,9 @@ export function ContactSection() {
           </p>
 
           <a
-            href="mailto:giltonkoech@email.com"
+            href="https://wa.me/254111823630"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-amber-500 text-zinc-950 font-bold rounded-full hover:bg-amber-400 transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] hover:-translate-y-1 mb-12">
 
             <Mail className="w-5 h-5" />
@@ -41,7 +43,9 @@ export function ContactSection() {
 
           <div className="flex justify-center gap-8">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/gilton-koech-8263b7365"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col items-center gap-2 text-zinc-400 hover:text-amber-500 transition-colors group">
 
               <div className="p-4 bg-zinc-950 rounded-full border border-zinc-800 group-hover:border-amber-500 transition-colors">
@@ -50,7 +54,9 @@ export function ContactSection() {
               <span className="text-sm font-medium">LinkedIn</span>
             </a>
             <a
-              href="#"
+              href="https://github.com/chipukizii"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col items-center gap-2 text-zinc-400 hover:text-amber-500 transition-colors group">
 
               <div className="p-4 bg-zinc-950 rounded-full border border-zinc-800 group-hover:border-amber-500 transition-colors">
