@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Download, Linkedin, Github, ExternalLink, Menu, Info, User, Briefcase } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { Download, Linkedin, Github, ExternalLink, Menu, Info, User, Briefcase, Code } from 'lucide-react';
 
 export function Portfolio() {
   const [openMenu, setOpenMenu] = useState(false);
   const [selected, setSelected] = useState(null);
-  const menuRef = useRef(null);
-  const popupRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
 
   const profileData = {
     image: 'https://res.cloudinary.com/dnhrk9ijv/image/upload/v1764869798/WhatsApp_Image_2025-12-04_at_20.36.00_huu3tk.jpg',
@@ -22,8 +22,8 @@ export function Portfolio() {
   };
 
   useEffect(() => {
-    function handleClickOutside(e) {
-      if ((menuRef.current && !menuRef.current.contains(e.target)) && (popupRef.current && !popupRef.current.contains(e.target))) {
+    function handleClickOutside(e: MouseEvent | TouchEvent) {
+      if ((menuRef.current && !menuRef.current.contains(e.target as Node)) && (popupRef.current && !popupRef.current.contains(e.target as Node))) {
         setOpenMenu(false);
         setSelected(null);
       }
@@ -36,8 +36,20 @@ export function Portfolio() {
     };
   }, []);
 
-  const handleSelect = (name) => {
-    setSelected(name);
+  const handleSelect = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
     setOpenMenu(false);
   };
 
@@ -53,11 +65,14 @@ export function Portfolio() {
             <div onClick={() => handleSelect('about')} className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer">
               <Info className="w-5 h-5 text-gray-600" /> About
             </div>
-            <div onClick={() => handleSelect('profile')} className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer">
-              <User className="w-5 h-5 text-gray-600" /> Profile
-            </div>
             <div onClick={() => handleSelect('projects')} className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer">
               <Briefcase className="w-5 h-5 text-gray-600" /> Projects
+            </div>
+            <div onClick={() => handleSelect('skills')} className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+              <Code className="w-5 h-5 text-gray-600" /> Skills
+            </div>
+            <div onClick={() => handleSelect('contact')} className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+              <User className="w-5 h-5 text-gray-600" /> Contact
             </div>
           </div>
         )}

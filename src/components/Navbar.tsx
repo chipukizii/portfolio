@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X, Code } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
@@ -49,6 +49,22 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById(link.href.substring(1));
+                if (element) {
+                  const offset = 80;
+                  const bodyRect = document.body.getBoundingClientRect().top;
+                  const elementRect = element.getBoundingClientRect().top;
+                  const elementPosition = elementRect - bodyRect;
+                  const offsetPosition = elementPosition - offset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
               className="text-sm font-medium text-zinc-400 hover:text-amber-500 transition-colors relative group">
 
               {link.name}
@@ -98,8 +114,26 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-zinc-300 hover:text-amber-500 transition-colors"
-                  onClick={() => setIsOpen(false)}>
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsOpen(false);
+                    const element = document.getElementById(link.href.substring(1));
+                    if (element) {
+                      const offset = 80;
+                      const bodyRect = document.body.getBoundingClientRect().top;
+                      const elementRect = element.getBoundingClientRect().top;
+                      const elementPosition = elementRect - bodyRect;
+                      const offsetPosition = elementPosition - offset;
+
+                      setTimeout(() => {
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                      }, 100);
+                    }
+                  }}
+                  className="text-lg font-medium text-zinc-300 hover:text-amber-500 transition-colors">
 
                   {link.name}
                 </a>
