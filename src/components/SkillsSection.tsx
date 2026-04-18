@@ -37,6 +37,16 @@ const skills = [
   level: 'Advanced'
 },
 {
+  name: 'Flask',
+  icon: <Server className="w-6 h-6" />,
+  level: 'Advanced'
+},
+{
+  name: 'FastAPI',
+  icon: <Server className="w-6 h-6" />,
+  level: 'Advanced'
+},
+{
   name: 'Node.js',
   icon: <Server className="w-6 h-6" />,
   level: 'Advanced'

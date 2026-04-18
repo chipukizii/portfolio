@@ -1,15 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ExternalLink,
-  Heart,
-  Baby,
-  ShoppingCart,
-  School,
-  Pill,
-  ArrowUpRight
-} from
-  'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 const projects = [
   {
     title: 'Sisi Kwa Sisi',
@@ -17,34 +7,34 @@ const projects = [
       'NGO website providing healthcare, education, and emergency support to vulnerable communities in Kenya.',
     tags: ['React', 'Tailwind CSS', 'Responsive'],
     link: 'https://sisi-kwa-sisii.vercel.app/',
-    icon: <Heart className="w-10 h-10" />,
+    image: '/projects/sisi.png',
     color: 'from-green-500 to-emerald-700'
   },
   {
     title: 'Daycare Services',
     description:
       'A comprehensive platform for daycare service management, scheduling, and booking for parents.',
-    tags: ['React', 'Node.js', 'Full Stack'],
+    tags: ['html,css,javascript', 'django', 'Full Stack'],
     link: 'https://daycare-services-1.onrender.com/',
-    icon: <Baby className="w-10 h-10" />,
+    image: '/projects/daycare.png',
     color: 'from-pink-500 to-rose-700'
   },
   {
     title: 'Rotich Store',
     description:
       'Full-featured online shopping platform with product catalog, cart management, and secure checkout.',
-    tags: ['React', 'Django', 'PostgreSQL'],
+    tags: ['html,css,javascript', 'django', 'Full Stack'],
     link: 'https://rotichstore-2.onrender.com/',
-    icon: <ShoppingCart className="w-10 h-10" />,
+    image: '/projects/rotich.png',
     color: 'from-blue-500 to-indigo-700'
   },
   {
     title: 'Simoti High School',
     description:
       'Informational portal for a high school featuring news updates, events calendar, and academic resources.',
-    tags: ['React', 'Django'],
+    tags: ['html,css,javascript', 'django', 'Full Stack'],
     link: 'https://simoti-high-school.onrender.com',
-    icon: <School className="w-10 h-10" />,
+    image: '/projects/simoti.png',
     color: 'from-orange-500 to-red-700'
   },
   {
@@ -52,8 +42,8 @@ const projects = [
     description:
       'Inventory management system for pharmacies to track stock levels, manage orders, and generate reports.',
     tags: ['React', 'Django', 'PostgreSQL'],
-    link: 'https://smartpharmacy-management.vercel.app/',
-    icon: <Pill className="w-10 h-10" />,
+    link: 'https://smartpharmacy.co.ke/',
+    image: '/projects/pharmacy.png',
     color: 'from-teal-500 to-cyan-700'
   }];
 
@@ -112,13 +102,13 @@ export function ProjectsSection() {
               }}
               className="group bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] hover:-translate-y-1 flex flex-col cursor-pointer">
 
-              <div
-                className={`h-52 bg-gradient-to-br ${project.color} flex items-center justify-center relative overflow-hidden`}>
-
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
-                <div className="relative text-white/90 group-hover:text-white transform group-hover:scale-110 transition-all duration-500">
-                  {project.icon}
-                </div>
                 <div className="absolute top-4 right-4 p-2 rounded-full bg-white/10 backdrop-blur-sm text-white/70 group-hover:text-white group-hover:bg-white/20 transition-all">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
@@ -173,13 +163,13 @@ export function ProjectsSection() {
               }}
               className="group bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] hover:-translate-y-1 flex flex-col cursor-pointer">
 
-              <div
-                className={`h-40 bg-gradient-to-br ${project.color} flex items-center justify-center relative overflow-hidden`}>
-
+              <div className="relative h-40 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
-                <div className="relative text-white/90 group-hover:text-white transform group-hover:scale-110 transition-all duration-500">
-                  {project.icon}
-                </div>
                 <div className="absolute top-4 right-4 p-2 rounded-full bg-white/10 backdrop-blur-sm text-white/70 group-hover:text-white group-hover:bg-white/20 transition-all">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>

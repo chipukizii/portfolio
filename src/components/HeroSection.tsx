@@ -66,8 +66,7 @@ export function HeroSection() {
           }}
           className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
 
-          Building digital experiences that make a difference. I craft robust,
-          scalable, and beautiful web applications with modern technologies.
+          Building high-performance digital experiences with Python and JavaScript. I specialize in crafting robust backend systems using Django, Flask, and FastAPI, paired with modern React frontends.
         </motion.p>
 
         <motion.div

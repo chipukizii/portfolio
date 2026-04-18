@@ -1,10 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Globe, Database } from 'lucide-react';
 const stats = [
 {
   label: 'Years Experience',
-  value: '2+'
+  value: '3+'
 },
 {
   label: 'Projects Completed',
@@ -59,16 +58,30 @@ export function AboutSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
               About <span className="text-amber-500">Me</span>
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-              I'm a passionate software engineer with experience building web
-              applications that solve real-world problems. From NGO platforms to
-              e-commerce solutions, I bring ideas to life with clean code and
-              thoughtful design.
+            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+              I am a full-stack Python developer with hands-on experience
+              building scalable web applications and APIs. My core stack includes
+              Python frameworks such as Django, FastAPI, and Flask, combined with
+              frontend technologies like React, JavaScript, HTML, and CSS.
             </p>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-              My journey in tech is driven by a curiosity to understand how
-              things work and a desire to create tools that improve people's
-              lives. I specialize in React, Node.js, and Python ecosystems.
+            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+              I specialize in designing and developing RESTful APIs,
+              integrating third-party services, and building microservices-based
+              architectures. I have practical experience working with payment
+              integrations, authentication systems (including social login), and
+              database management using PostgreSQL and other relational databases.
+            </p>
+            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+              I enjoy turning complex business requirements into efficient,
+              maintainable solutions, with a focus on performance, security, and
+              user experience. Whether working on backend systems, frontend
+              interfaces, or full-stack applications, I aim to deliver reliable
+              and scalable products.
+            </p>
+            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+              I am continuously learning and improving my skills, staying up to
+              date with modern development practices and tools to build
+              high-quality software solutions.
             </p>
 
             <div className="grid grid-cols-3 gap-8 border-t border-zinc-800 pt-8">
