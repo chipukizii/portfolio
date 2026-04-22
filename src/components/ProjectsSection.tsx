@@ -45,6 +45,15 @@ const projects = [
     link: 'https://smartpharmacy.co.ke/',
     image: '/projects/pharmacy.png',
     color: 'from-teal-500 to-cyan-700'
+  },
+  {
+    title: 'BursaryHub',
+    description:
+      'A transparent and efficient platform connecting students with Village Elders, Chiefs, and County Committees in one seamless application process.',
+    tags: ['Django', 'HTML/CSS', 'Tailwind CSS', 'Full Stack'],
+    link: 'https://smartbursariesmanagement.onrender.com',
+    image: '/projects/bursary.png',
+    color: 'from-indigo-500 to-purple-700'
   }];
 
 export function ProjectsSection() {
