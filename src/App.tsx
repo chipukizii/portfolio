@@ -4,6 +4,7 @@ import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { SkillsSection } from './components/SkillsSection';
+import { CertificatesSection } from './components/CertificatesSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 export function App() {
@@ -15,6 +16,7 @@ export function App() {
         <AboutSection />
         <ProjectsSection />
         <SkillsSection />
+        <CertificatesSection />
         <ContactSection />
       </main>
       <Footer />
