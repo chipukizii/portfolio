@@ -85,7 +85,7 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
           <a
-            href="https://drive.google.com/file/d/1nY9IGSglbOlFF7kZIRJ4UaPMwMLVeC_D/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1d3k6yuZlmho-nvu8sIgGAZlUgyo9AGnN/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3.5 bg-amber-500 text-zinc-950 font-semibold rounded-full hover:bg-amber-400 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] hover:-translate-y-1">
