@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -6,35 +6,42 @@
 
 :root {
   --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
+
 body {
   font-family: var(--font-sans);
-  background-color: #09090b; /* zinc-950 */
-  color: #e4e4e7; /* zinc-200 */
+  @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-200 transition-colors duration-300;
   overflow-x: hidden;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
 }
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  @apply bg-zinc-100 dark:bg-zinc-950;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 5px;
+  @apply bg-zinc-300 dark:bg-zinc-800 rounded-full;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  @apply bg-zinc-400 dark:bg-zinc-700;
 }
+
 .text-amber-glow {
   text-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
 }

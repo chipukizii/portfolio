@@ -1,43 +1,43 @@
-
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Globe, Database } from 'lucide-react';
+
 const stats = [
-{
-  label: 'Years Experience',
-  value: '3+'
-},
-{
-  label: 'Projects Completed',
-  value: '5+'
-},
-{
-  label: 'Happy Clients',
-  value: '3+'
-}];
+  {
+    label: 'Years Experience',
+    value: '3+'
+  },
+  {
+    label: 'Projects Completed',
+    value: '5+'
+  },
+  {
+    label: 'Happy Clients',
+    value: '3+'
+  }
+];
 
 const features = [
-{
-  icon: <Code2 className="w-6 h-6 text-amber-500" />,
-  title: 'Clean Code',
-  description:
-  'Writing maintainable, scalable, and efficient code is my priority.'
-},
-{
-  icon: <Globe className="w-6 h-6 text-amber-500" />,
-  title: 'Modern Tech',
-  description:
-  'Utilizing the latest frameworks and tools to build robust applications.'
-},
-{
-  icon: <Database className="w-6 h-6 text-amber-500" />,
-  title: 'Full Stack',
-  description:
-  'Comfortable working with both frontend interfaces and backend logic.'
-}];
+  {
+    icon: <Code2 className="w-6 h-6 text-amber-500" />,
+    title: 'Clean Code',
+    description: 'Writing maintainable, scalable, and efficient code is my priority.'
+  },
+  {
+    icon: <Globe className="w-6 h-6 text-amber-500" />,
+    title: 'Modern Tech',
+    description: 'Utilizing the latest frameworks and tools to build robust applications.'
+  },
+  {
+    icon: <Database className="w-6 h-6 text-amber-500" />,
+    title: 'Full Stack',
+    description: 'Comfortable working with both frontend interfaces and backend logic.'
+  }
+];
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-zinc-950 relative overflow-hidden">
+    <section id="about" className="py-24 bg-white dark:bg-zinc-950 relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -54,46 +54,46 @@ export function AboutSection() {
             }}
             transition={{
               duration: 0.6
-            }}>
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
+            }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6 font-heading">
               About <span className="text-amber-500">Me</span>
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-6 font-sans">
               I am a full-stack Python developer with hands-on experience
               building scalable web applications and APIs. My core stack includes
               Python frameworks such as Django, FastAPI, and Flask, combined with
               frontend technologies like React, JavaScript, HTML, and CSS.
             </p>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-6 font-sans">
               I specialize in designing and developing RESTful APIs,
               integrating third-party services, and building microservices-based
               architectures. I have practical experience working with payment
               integrations, authentication systems (including social login), and
               database management using PostgreSQL and other relational databases.
             </p>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-6 font-sans">
               I enjoy turning complex business requirements into efficient,
               maintainable solutions, with a focus on performance, security, and
               user experience. Whether working on backend systems, frontend
               interfaces, or full-stack applications, I aim to deliver reliable
               and scalable products.
             </p>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-6 font-sans">
               I am continuously learning and improving my skills, staying up to
               date with modern development practices and tools to build
               high-quality software solutions.
             </p>
 
-            <div className="grid grid-cols-3 gap-8 border-t border-zinc-800 pt-8">
-              {stats.map((stat, index) =>
-              <div key={index}>
-                  <h3 className="text-3xl font-bold text-white mb-1 font-serif">
+            <div className="grid grid-cols-3 gap-8 border-t border-zinc-200 dark:border-zinc-800 pt-8">
+              {stats.map((stat, index) => (
+                <div key={index}>
+                  <h3 className="text-3xl font-bold text-zinc-900 dark:text-white mb-1 font-heading">
                     {stat.value}
                   </h3>
-                  <p className="text-sm text-zinc-500">{stat.label}</p>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400">{stat.label}</p>
                 </div>
-              )}
+              ))}
             </div>
           </motion.div>
 
@@ -112,29 +112,29 @@ export function AboutSection() {
             transition={{
               duration: 0.6
             }}
-            className="grid gap-6">
-
-            {features.map((feature, index) =>
-            <div
-              key={index}
-              className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-amber-500/30 transition-colors group">
-
+            className="grid gap-6"
+          >
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-amber-500/30 transition-colors group shadow-sm dark:shadow-none"
+              >
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-amber-500/10 group-hover:bg-amber-500/20 transition-colors">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2 font-serif">
+                    <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 font-heading">
                       {feature.title}
                     </h3>
-                    <p className="text-zinc-400">{feature.description}</p>
+                    <p className="text-zinc-600 dark:text-zinc-400 font-sans">{feature.description}</p>
                   </div>
                 </div>
               </div>
-            )}
+            ))}
           </motion.div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }

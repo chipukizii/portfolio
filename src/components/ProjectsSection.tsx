@@ -1,6 +1,16 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+
 const projects = [
+  {
+    title: 'Smart Pharmacy Management',
+    description:
+      'Inventory management system for pharmacies to track stock levels, manage orders, and generate reports.',
+    tags: ['React', 'Django', 'PostgreSQL'],
+    link: 'https://smartpharmacy.co.ke/',
+    image: '/projects/pharmacy.png',
+    color: 'from-teal-500 to-cyan-700'
+  },
   {
     title: 'Sisi Kwa Sisi',
     description:
@@ -14,7 +24,7 @@ const projects = [
     title: 'Daycare Services',
     description:
       'A comprehensive platform for daycare service management, scheduling, and booking for parents.',
-    tags: ['html,css,javascript', 'django', 'Full Stack'],
+    tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
     link: 'https://daycare-services-1.onrender.com/',
     image: '/projects/daycare.png',
     color: 'from-pink-500 to-rose-700'
@@ -23,7 +33,7 @@ const projects = [
     title: 'Rotich Store',
     description:
       'Full-featured online shopping platform with product catalog, cart management, and secure checkout.',
-    tags: ['html,css,javascript', 'django', 'Full Stack'],
+    tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
     link: 'https://rotichstore-2.onrender.com/',
     image: '/projects/rotich.png',
     color: 'from-blue-500 to-indigo-700'
@@ -32,19 +42,10 @@ const projects = [
     title: 'Simoti High School',
     description:
       'Informational portal for a high school featuring news updates, events calendar, and academic resources.',
-    tags: ['html,css,javascript', 'django', 'Full Stack'],
+    tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
     link: 'https://simoti-high-school.onrender.com',
     image: '/projects/simoti.png',
     color: 'from-orange-500 to-red-700'
-  },
-  {
-    title: 'Smart Pharmacy Management',
-    description:
-      'Inventory management system for pharmacies to track stock levels, manage orders, and generate reports.',
-    tags: ['React', 'Django', 'PostgreSQL'],
-    link: 'https://smartpharmacy.co.ke/',
-    image: '/projects/pharmacy.png',
-    color: 'from-teal-500 to-cyan-700'
   },
   {
     title: 'BursaryHub',
@@ -54,11 +55,12 @@ const projects = [
     link: 'https://smartbursariesmanagement.onrender.com',
     image: '/projects/bursary.png',
     color: 'from-indigo-500 to-purple-700'
-  }];
+  }
+];
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 bg-zinc-900 relative">
+    <section id="projects" className="py-24 bg-zinc-100/70 dark:bg-zinc-900 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{
@@ -75,12 +77,12 @@ export function ProjectsSection() {
           transition={{
             duration: 0.6
           }}
-          className="text-center mb-16">
-
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4 font-heading">
             Featured <span className="text-amber-500">Projects</span>
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto font-sans">
             A selection of my recent work, ranging from non-profit initiatives
             to commercial applications.
           </p>
@@ -88,7 +90,7 @@ export function ProjectsSection() {
 
         {/* Top row: 2 featured projects, larger cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {projects.slice(0, 2).map((project, index) =>
+          {projects.slice(0, 2).map((project, index) => (
             <motion.a
               key={index}
               href={project.link}
@@ -109,47 +111,47 @@ export function ProjectsSection() {
                 duration: 0.5,
                 delay: index * 0.1
               }}
-              className="group bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] hover:-translate-y-1 flex flex-col cursor-pointer">
-
-              <div className="relative h-52 overflow-hidden">
+              className="group bg-white dark:bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 hover:border-amber-500/50 transition-all duration-300 shadow-sm dark:shadow-none hover:shadow-xl dark:hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] hover:-translate-y-1 flex flex-col cursor-pointer"
+            >
+              <div className="relative h-52 overflow-hidden bg-zinc-200 dark:bg-zinc-800">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
-                <div className="absolute top-4 right-4 p-2 rounded-full bg-white/10 backdrop-blur-sm text-white/70 group-hover:text-white group-hover:bg-white/20 transition-all">
+                <div className="absolute top-4 right-4 p-2 rounded-full bg-zinc-900/40 dark:bg-white/10 backdrop-blur-sm text-white group-hover:bg-amber-500 transition-all">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>
 
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-xl font-bold text-white font-serif group-hover:text-amber-500 transition-colors">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white font-heading group-hover:text-amber-600 dark:group-hover:text-amber-500 transition-colors">
                     {project.title}
                   </h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-5 leading-relaxed flex-1">
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-5 leading-relaxed flex-1 font-sans">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) =>
+                  {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 text-xs font-medium text-amber-500/80 bg-amber-500/10 rounded-full border border-amber-500/20">
-
+                      className="px-3 py-1 text-xs font-medium font-mono text-amber-700 dark:text-amber-500/80 bg-amber-500/10 rounded-full border border-amber-500/20"
+                    >
                       {tag}
                     </span>
-                  )}
+                  ))}
                 </div>
               </div>
             </motion.a>
-          )}
+          ))}
         </div>
 
-        {/* Bottom row: 3 projects, equal columns */}
+        {/* Bottom row: remaining projects */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.slice(2).map((project, index) =>
+          {projects.slice(2).map((project, index) => (
             <motion.a
               key={index + 2}
               href={project.link}
@@ -170,42 +172,42 @@ export function ProjectsSection() {
                 duration: 0.5,
                 delay: (index + 2) * 0.1
               }}
-              className="group bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] hover:-translate-y-1 flex flex-col cursor-pointer">
-
-              <div className="relative h-40 overflow-hidden">
+              className="group bg-white dark:bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 hover:border-amber-500/50 transition-all duration-300 shadow-sm dark:shadow-none hover:shadow-xl dark:hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] hover:-translate-y-1 flex flex-col cursor-pointer"
+            >
+              <div className="relative h-40 overflow-hidden bg-zinc-200 dark:bg-zinc-800">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
-                <div className="absolute top-4 right-4 p-2 rounded-full bg-white/10 backdrop-blur-sm text-white/70 group-hover:text-white group-hover:bg-white/20 transition-all">
+                <div className="absolute top-4 right-4 p-2 rounded-full bg-zinc-900/40 dark:bg-white/10 backdrop-blur-sm text-white group-hover:bg-amber-500 transition-all">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>
 
               <div className="p-5 flex-1 flex flex-col">
-                <h3 className="text-lg font-bold text-white mb-2 font-serif group-hover:text-amber-500 transition-colors">
+                <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2 font-heading group-hover:text-amber-600 dark:group-hover:text-amber-500 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-zinc-400 text-sm mb-4 leading-relaxed flex-1">
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4 leading-relaxed flex-1 font-sans">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) =>
+                  {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 text-xs font-medium text-amber-500/80 bg-amber-500/10 rounded-full border border-amber-500/20">
-
+                      className="px-3 py-1 text-xs font-medium font-mono text-amber-700 dark:text-amber-500/80 bg-amber-500/10 rounded-full border border-amber-500/20"
+                    >
                       {tag}
                     </span>
-                  )}
+                  ))}
                 </div>
               </div>
             </motion.a>
-          )}
+          ))}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }
