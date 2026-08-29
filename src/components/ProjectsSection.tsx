@@ -41,7 +41,7 @@ const projects = [
   {
     title: 'Simoti High School',
     description:
-      'Informational portal for a high school featuring news updates, events calendar, and academic resources.',
+      'Informational portal for a high school featuring news updates,legendary teachers, events calendar, and academic resources.',
     tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
     link: 'https://simoti-high-p60x.onrender.com/',
     image: '/projects/simoti.png',
