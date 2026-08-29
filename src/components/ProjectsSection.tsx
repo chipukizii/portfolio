@@ -43,7 +43,7 @@ const projects = [
     description:
       'Informational portal for a high school featuring news updates, events calendar, and academic resources.',
     tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
-    link: 'https://simoti-high-school.onrender.com',
+    link: 'https://simoti-high-p60x.onrender.com/',
     image: '/projects/simoti.png',
     color: 'from-orange-500 to-red-700'
   },
