@@ -30,11 +30,11 @@ const projects = [
     color: 'from-pink-500 to-rose-700'
   },
   {
-    title: 'Rotich Store',
+    title: 'TechStore',
     description:
       'Full-featured online shopping platform with product catalog, cart management, and secure checkout.',
     tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
-    link: 'https://rotichstore-2.onrender.com/',
+    link: 'https://techstore-n8fs.onrender.com/',
     image: '/projects/rotich.png',
     color: 'from-blue-500 to-indigo-700'
   },
