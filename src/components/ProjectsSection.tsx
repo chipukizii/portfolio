@@ -25,7 +25,7 @@ const projects = [
     description:
       'A comprehensive platform for daycare service management, scheduling, and booking for parents.',
     tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
-    link: 'https://daycare-services-1.onrender.com/',
+    link: 'https://daycare-services-c7n5.onrender.com/',
     image: '/projects/daycare.png',
     color: 'from-pink-500 to-rose-700'
   },
