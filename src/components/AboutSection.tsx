@@ -9,11 +9,11 @@ const stats = [
   },
   {
     label: 'Projects Completed',
-    value: '5+'
+    value: '10+'
   },
   {
     label: 'Happy Clients',
-    value: '3+'
+    value: '6+'
   }
 ];
 
