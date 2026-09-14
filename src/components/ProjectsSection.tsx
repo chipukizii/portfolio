@@ -21,11 +21,11 @@ const projects = [
     color: 'from-green-500 to-emerald-700'
   },
   {
-    title: 'Fashion Store services ',
+    title: 'Daycare Services',
     description:
-      'A comprehensive platform for fashion service management, scheduling, and booking for kenyans.',
+      'A comprehensive platform for daycare service management, scheduling, and booking for parents.',
     tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
-    link: 'lukustore.onrender.com/',
+    link: 'https://daycare-services-c7n5.onrender.com/',
     image: '/projects/daycare.png',
     color: 'from-pink-500 to-rose-700'
   },
