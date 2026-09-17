@@ -12,6 +12,16 @@ const projects = [
     color: 'from-teal-500 to-cyan-700'
   },
   {
+    title: 'Lukustore',
+    description:
+      'Full-stack fashion storefront for discovering and ordering clothing, accessories, and shoes with countrywide delivery in Kenya.',
+    tags: ['HTML/CSS/JS', 'Django', 'Full Stack'],
+    link: 'https://lukustore.onrender.com/',
+    image:
+      'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=80',
+    color: 'from-stone-500 to-zinc-800'
+  },
+  {
     title: 'Sisi Kwa Sisi',
     description:
       'NGO website providing healthcare, education, and emergency support to vulnerable communities in Kenya.',
