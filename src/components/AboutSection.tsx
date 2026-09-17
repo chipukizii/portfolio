@@ -87,11 +87,11 @@ export function AboutSection() {
 
             <div className="grid grid-cols-3 gap-8 border-t border-zinc-200 dark:border-zinc-800 pt-8">
               {stats.map((stat, index) => (
-                <div key={index}>
-                  <h3 className="text-3xl font-bold text-zinc-900 dark:text-white mb-1 font-heading">
+                <div key={index} className="group transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-[0_0_16px_rgba(245,158,11,0.35)]">
+                  <h3 className="text-3xl font-bold text-zinc-900 dark:text-white mb-1 font-heading transition-colors duration-300 group-hover:text-amber-500">
                     {stat.value}
                   </h3>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">{stat.label}</p>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 transition-colors duration-300 group-hover:text-amber-500">{stat.label}</p>
                 </div>
               ))}
             </div>
